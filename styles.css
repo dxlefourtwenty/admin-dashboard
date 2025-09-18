@@ -10,7 +10,6 @@
         "sidebar content content content content"
         "sidebar content content content content"
         "sidebar content content content content";
-    border: 5px solid navy;
 }
 
 #header {
@@ -20,7 +19,47 @@
 
 #sidebar {
     grid-area: sidebar;
-    border: 2px solid blue;
+    background-color: rgb(0, 154, 214);
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-areas: 
+        "dashboardTitle"
+        "."
+        "userTabs"
+        "userTabs"
+        "userTabs"
+        "userTabs"
+        "userTabs"
+        "userTabs"
+        "."
+        "."
+        "userPreferences"
+        "userPreferences"
+        "userPreferences";
+}
+
+#sidebar div {
+    width: 100%;
+    color: white;
+    font-size: 40px;
+}
+
+#sidebar #dashboard-title {
+    grid-area: dashboardTitle;
+    font-size: 50px;
+}
+
+#sidebar ul {
+    list-style: none;
+    line-height: 1.5em;
+}
+
+#user-tabs {
+    grid-area: userTabs;
+}
+
+#user-preferences {
+    grid-area: userPreferences;
 }
 
 #content {

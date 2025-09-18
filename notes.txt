@@ -1,0 +1,28 @@
+ li {
+      padding-left: 25px; /* Adjust as needed for image width + spacing */
+      background-repeat: no-repeat;
+      background-position: 0 center; /* Position the image to the left and vertically centered */
+      background-size: 20px 20px; /* Adjust as needed for image size */
+      margin-bottom: 5px; /* Spacing between list items */
+    }
+
+/* Unique styles for each list item */
+    li:nth-child(1) {
+      background-image: url('path/to/image1.png');
+    }
+
+    li:nth-child(2) {
+      background-image: url('path/to/image2.png');
+    }
+
+    li:nth-child(3) {
+      background-image: url('path/to/image3.png');
+    }
+
+    
+    ul {
+      list-style: none;
+      padding: 0; /* Remove default padding */
+      margin: 0;  /* Remove default margin */
+    }
+
