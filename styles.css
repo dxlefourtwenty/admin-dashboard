@@ -65,7 +65,7 @@
     border-radius: 25px;
     color: white;
     font-weight: bold;
-    height: 50%;
+    height: 46%;
     width: 80%;
     border: none;
     font-size: 18px;
@@ -99,25 +99,31 @@
 
 #greeting {
     grid-area: greeting;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 18px;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 65px;
+    line-height: 1.8em;
 }
 
 #greeting .user-picture {
     height: 100px;
     width: 100px;
-    transform: translate(65%, -5%);
+    /* transform: translate(65%, -5%); */
 }
 
-#user-greeting {
-    transform: translate(-40%, -5%);
-    font-weight: bold;
-}
-
-#user-greeting #user-name-greeting {
+#greeting #user-name-greeting {
     font-size: 30px;
     font-weight: bolder;
+}
+
+#greeting .user-picture,
+#greeting #hello-greeting {
+    transform: translate(0%, -15%);
 }
 
 #nav {
