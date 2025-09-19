@@ -1,25 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Roboto';
+}
+
 #page-container {
     display: grid;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
         "sidebar header header header header"
+        "sidebar content content content content"
+        "sidebar content content content content"
         "sidebar content content content content"
         "sidebar content content content content"
         "sidebar content content content content";
 }
 
 #header {
+    display: grid;
     grid-area: header;
-    border: 2px solid black;
+    grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "searchContainer profile"
+        "greeting nav";
+    box-shadow: 0 10px 10px 0 rgba(15, 15, 15, 0.1);
+    z-index: 10;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: searchContainer;
+}
+
+#search-container img {
+    height: 30px;
+    width: 30px;
+    transform: translate(-5%, -48%);
+}
+
+#search-input {
+    font-size: 20px;
+    background-color: rgb(233, 238, 245);
+    border-radius: 30px;
+    width: 82%;
+    height: 37px;
+    border: none;
+    transform: translate(2%, -40%);
+}
+
+#nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-button {
+    background-color: rgb(3, 144, 209);
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    height: 50%;
+    width: 80%;
+    border: none;
+    font-size: 18px;
+    transform: translate(-25%, 40%);
+
+}
+
+#profile {
+    grid-area: profile;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-name {
+    font-weight: bolder;
+    font-size: 24px;
+    transform: translate(40%, -25%);
+}
+
+#user-name img {
+    width: 30px;
+    height: 30px;
+    transform: translate(-55%, 20%);
+}
+
+#user-name #profile-picture {
+    width: 75px;
+    height: 75px;
+    transform: translate(-5%, 35%);
+}
+
+#greeting {
+    grid-area: greeting;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 18px;
+}
+
+#greeting .user-picture {
+    height: 100px;
+    width: 100px;
+    transform: translate(65%, -5%);
+}
+
+#user-greeting {
+    transform: translate(-40%, -5%);
+    font-weight: bold;
+}
+
+#user-greeting #user-name-greeting {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#nav {
+    grid-area: nav;
 }
 
 #sidebar {
+    font-weight: bold;
     grid-area: sidebar;
-    background-color: rgb(0, 154, 214);
+    background-color: rgb(3, 144, 209);
     display: grid;
     grid-template-rows: repeat(20, 1fr);
     grid-template-areas: 
@@ -46,12 +154,30 @@
 
 #sidebar #dashboard-title {
     grid-area: dashboardTitle;
-    font-size: 50px;
+    font-size: 35px;
+    transform: translate(8%, 10%);
+}
+
+#dashboard-title img {
+    width: 55px;
+    height: 55px;
+    color: white;
+    filter: brightness(0) invert(1);
+    transform: translate(-10%, 25%);
 }
 
 #sidebar ul {
     list-style: none;
-    line-height: 1.5em;
+    line-height: 2.3em;
+    font-size: 26px;
+    transform: translate(5%, -8%);
+}
+
+li img {
+    width: 30px;
+    height: 30px;
+    transform: translate(-80%, 15%);
+    filter: brightness(0) invert(1);
 }
 
 #user-tabs {
@@ -60,11 +186,13 @@
 
 #user-preferences {
     grid-area: userPreferences;
+    transform: translate(0%, -45%);
 }
 
 #content {
     grid-area: content;
-    border: 2px solid red;
+    background-color: rgb(233, 238, 245);
+    /* border: 2px solid red; */
 }
 
 #showcase {

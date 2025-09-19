@@ -5,31 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="page-container">
         <div id="header">
-
+            <div id="search-container">
+                <img src="icons/magnify.svg">
+                <input type="search" placeholder="  Search" id="search-input"> 
+            </div>
+            <div id="profile">
+                <div id="user-name">
+                    <img src="icons/bell-ring-outline.svg">
+                    <img id="profile-picture" src="icons/pngtree-man-silhouette-profile-circle-logo-vector-png-image_6992202.png">
+                    Dale Peligro
+                </div>
+            </div>
+            <div id="greeting">
+                <img class="user-picture" src="icons/pngtree-man-silhouette-profile-circle-logo-vector-png-image_6992202.png">
+                <div id="user-greeting">
+                    <p id="hello-greeting">
+                        Hi there, <br>
+                        <span id="user-name-greeting">Dale Peligro (@Dale)</span>
+                    </p>
+                 </div>
+            </div>
+            <div id="nav">
+                <button class="nav-button">New</button>
+                <button class="nav-button">Upload</button>
+                <button class="nav-button">Share</button>
+            </div>
         </div>
         <div id="sidebar">
             <div id="dashboard-title">
+                <img src="icons/view-dashboard.svg">
                 <span>Dashboard</span>
             </div>
             <div id="user-tabs">
                 <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
+                    <li><img src="icons/home.svg" alt="">Home</li>
+                    <li><img src="icons/card-account-details.svg" alt="">Profile</li>
+                    <li><img src="icons/message-reply.svg">Messages</li>
+                    <li><img src="icons/clock-time-three-outline.svg" alt="">History</li>
+                    <li><img src="icons/file-multiple-outline.svg" alt="">Tasks</li>
+                    <li><img src="icons/account-group-outline.svg">Communities</li>
                 </ul>
             </div>
             <div id="user-preferences">
                 <ul>
-                    <li>Settings</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
+                    <li><img src="icons/cog-outline.svg" alt="">Settings</li>
+                    <li><img src="icons/help-box-outline.svg" alt="">Support</li>
+                    <li><img src="icons/shield-check.svg" alt="">Privacy</li>
                 </ul>
             </div>
         </div>
@@ -39,7 +67,7 @@
             </div>
             <div id="announcements-container">
                 <div class="label">
-                    Announcements
+                    <!-- Announcements -->
                 </div>
                 <div id="announcements">
 
@@ -47,7 +75,7 @@
             </div>
             <div id="trending-container">
                 <div class="label">
-                    Trending
+                    <!-- Trending -->
                 </div>
                 <div id="trending">
 
