@@ -47,12 +47,24 @@
 
 #search-input {
     font-size: 20px;
+    padding-left: 16px;
+    padding-right: 8px;
     background-color: rgb(233, 238, 245);
     border-radius: 30px;
     width: 82%;
     height: 37px;
     border: none;
     transform: translate(2%, -40%);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    background: url('icons/close-octagon.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
 }
 
 #nav {
