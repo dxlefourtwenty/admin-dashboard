@@ -210,18 +210,134 @@ li img {
 #content {
     grid-area: content;
     background-color: rgb(233, 238, 245);
-    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 0.1fr) repeat(1, 1fr) repeat(1, 0.05fr) repeat(1, 1fr);
+    grid-template-areas: 
+        "projectsHeader projectsHeader projectsHeader announcementsHeader"
+        "showcase showcase showcase announcements"
+        "showcase showcase showcase trendingHeader"
+        "showcase showcase showcase trending";
+}
+
+.content-headers {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.content-headers#projects {
+    grid-area: projectsHeader;
+    padding-left: 32px;
+    padding-top: 45px;
+}
+
+.content-headers#announcements {
+    grid-area: announcementsHeader;
+    padding-top: 45px;
+    margin-left: -8px;
+}
+
+.content-headers#trending {
+    grid-area: trendingHeader;
+    padding-top: 30px;
+    margin-left: -8px;
 }
 
 #showcase {
+    grid-area: showcase;
+    padding-top: 10px;
+    padding-left: 30px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
 
+#showcase .card {
+    height: 87%;
+    width: 92%;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin: 0;
+    gap: 0;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+        "."
+        "description"
+        "description"
+        "description"
+        "description"
+        "actions"
+        ".";
+    box-sizing: border-box;
+    border: none;
+    border-left: 10px solid #f4b400;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    background: #fff;
+
+    /* transform: translate(5%, 25%); */
+}
+
+.card-description {
+    grid-area: description;
+    padding-left: 30px;
+    padding-right: 30px;
+    transform: translate(0%, 6%);
+}
+
+.card .actions {
+    display: flex;
+    gap: 32px;
+    grid-area: actions;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.card .actions img {
+    width: 1.8rem;
+    height: 1.8rem;
+    align-self: flex-end;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.card p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin: 8px 0 16px;
+    margin-top : 3px;
 }
 
 #announcements-container {
-
+    grid-area: announcements;
 }
 
 #trending-container {
+    grid-area: trending;
+}
 
+#announcements-container,
+#trending-container {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-top: 10px;
+    margin-bottom: 8px;
+}
+
+.side-card {
+    background: #fff;
+    height: 92%;
+    width: 87%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    box-sizing: border-box;
 }
 
